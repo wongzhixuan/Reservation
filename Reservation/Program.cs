@@ -38,7 +38,7 @@ namespace Reservation
                 // sum up rooms needed for reservations with same reservation date
                 totalRooms += roomsRequired;
 
-                Console.WriteLine($"Customer : Customer Name : {reserve[i].FirstName} {reserve[i].LastName} ({Convert.ToInt32(reserve[i].Pax)}) - {roomsRequired} rooms required.");
+                Console.WriteLine($"Customer : Customer Name : {reserve[i].FirstName} {reserve[i].LastName} ({Convert.ToInt32(reserve[i].Pax)}) - {roomsRequired} room{(roomsRequired > 1 ? "s" : "")} required.");
 
                 // prints the total rooms needed (ignored when next customer has the same reservation date)
                 if (!hasSameReservationDateWithNextCustomer(i))
